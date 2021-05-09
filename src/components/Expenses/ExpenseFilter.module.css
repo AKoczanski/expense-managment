@@ -1,0 +1,18 @@
+.Control {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Control select {
+    font: inherit;
+    padding: 0.35rem 3rem;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-left: 120px;
+    margin-top: 10px;
+    border: 2px solid #88D8D8;
+}
+
+.Control select:focus {
+    outline: none;
+}

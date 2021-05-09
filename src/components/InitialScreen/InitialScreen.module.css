@@ -1,0 +1,14 @@
+.InitialContainer {
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.FlexContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15%;
+}

@@ -1,0 +1,33 @@
+.Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #88d8d8;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.Description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.Container h2 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.1rem;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.Price {
+    color: black;
+    background-color: #ddd;
+    font-weight: bold;
+    border: 1px solid #88d8d8;
+    padding: 0.5rem;
+    border-radius: 12px;
+}

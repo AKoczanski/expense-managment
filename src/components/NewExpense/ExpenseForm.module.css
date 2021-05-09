@@ -1,0 +1,37 @@
+.FlexContainer {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 140%;
+}
+
+.FlexElement {
+    display: flex;
+    flex-direction: column;
+}
+
+.FlexElement label {
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.FlexElement input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 6px;
+    max-width: 100%;
+    border: 2px solid #88D8D8;
+}
+
+.FlexElement input:focus {
+    outline: none;
+
+}
+
+.AddBtn {
+    align-self: center;
+    margin-left: 80px;
+}

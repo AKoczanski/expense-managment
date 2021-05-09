@@ -1,0 +1,19 @@
+.Container {
+    /* background-color: rebeccapurple; */
+    width: 35%;
+    text-align: center;
+}
+
+.Header {
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.Header span {
+    color: #78D8C8;
+}
+
+.Paragraph {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.6);
+}

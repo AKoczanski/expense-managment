@@ -1,0 +1,6 @@
+.Container {
+    width: 40%;
+    height: 70%;
+    margin-top: 120px;
+    overflow-y: scroll;
+}
