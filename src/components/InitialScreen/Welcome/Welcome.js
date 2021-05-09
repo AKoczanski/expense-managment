@@ -11,7 +11,7 @@ function Welcome() {
       <p className={classes.Paragraph}>
         "Where is my money?" Control your expense and income!
       </p>
-      <Link to="/expense">
+      <Link to="/login">
         <Button>Get started</Button>
       </Link>
     </div>

@@ -4,6 +4,7 @@ import React from "react";
 function Button(props) {
   return (
     <button
+      disabled={props.disabled}
       onClick={props.onCLick}
       className={`${classes.Button} ${props.className}`}
       type={props.type}
