@@ -2,12 +2,3 @@
     list-style: none;
     padding: 0;
 }
-
-.Header {
-    color: rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
-
-.Header span {
-    color: #88D8D8;
-}

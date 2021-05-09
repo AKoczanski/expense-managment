@@ -4,7 +4,7 @@ import ExpensesList from "../Expenses/ExpensesList";
 import ExpenseFilter from "../Expenses/ExpenseFilter";
 
 function Expenses(props) {
-  const [filteredYear, setFilteredYear] = useState("");
+  const [filteredYear, setFilteredYear] = useState("2022");
 
   const changeYear = (selectedYear) => {
     setFilteredYear(selectedYear);
@@ -17,6 +17,11 @@ function Expenses(props) {
   return (
     <div className={classes.Container}>
       <ExpenseFilter selected={filteredYear} onChangeFilter={changeYear} />
+      {filteredExpenses.length === 0 && (
+        <h2 className={classes.Header}>
+          Expenses not found in <span>{filteredYear}</span> year.
+        </h2>
+      )}
       <ExpensesList
         expenses={filteredExpenses}
         year={filteredYear}

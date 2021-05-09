@@ -3,14 +3,6 @@ import React from "react";
 import ExpenseItem from "../Expenses/ExpenseItem";
 
 function ExpensesList(props) {
-  if (props.expenses.length === 0) {
-    return (
-      <h2 className={classes.Header}>
-        Expenses not found in <span>{props.year}</span> year.
-      </h2>
-    );
-  }
-
   return (
     <ul className={classes.List}>
       {props.expenses.map((item) => {

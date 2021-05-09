@@ -4,3 +4,12 @@
     margin-top: 120px;
     overflow-y: scroll;
 }
+
+.Header {
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.Header span {
+    color: #88D8D8;
+}
