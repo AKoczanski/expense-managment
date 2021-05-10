@@ -1,0 +1,49 @@
+.InputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.InputContainer label {
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.InputContainer input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 6px;
+    max-width: 100%;
+    border: 2px solid #88D8D8;
+    margin-bottom: 20px;
+}
+
+.InputContainer input:focus {
+    outline: none;
+}
+
+.InvalidBtn:disabled,
+.InvalidBtn:disabled:active,
+.InvalidBtn:disabled:hover {
+    background-color: #ccc;
+    color: #292929;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.InvalidInput input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+}
+
+.InvalidInput input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+}
+
+.Paragraph {
+    font-size: 22px;
+    color: red;
+    margin-top: -20px;
+}
