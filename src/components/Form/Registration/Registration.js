@@ -4,6 +4,7 @@ import InputField from "../InputField";
 import Button from "../../UI/Button";
 import useInput from "../../../hooks/use-input";
 import classes from "./Registration.module.css";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const {
@@ -51,57 +52,62 @@ const Registration = () => {
   };
 
   return (
-    <Form onSubmit={onSubmitHandler}>
-      <InputField
-        className={classes.InputContainer}
-        label="E-Mail"
-        htmlFor="email"
-        id="email"
-        type="email"
-        value={emailValue}
-        onChange={emailChangeHandler}
-        onBlur={emailBlurHandler}
-      />
-      {emailHasError && (
-        <p className={classes.Paragraph}>Please enter the valid email!</p>
-      )}
-      <InputField
-        className={classes.InputContainer}
-        label="Password"
-        htmlFor="password"
-        id="password"
-        type="password"
-        value={passwordValue}
-        onChange={passwordChangeHandler}
-        onBlur={passwordBlurHandler}
-      />
-      {passwordHasError && (
-        <p className={classes.Paragraph}>Please enter the valid password!</p>
-      )}
-      <InputField
-        className={classes.InputContainer}
-        label="Confirm Password"
-        htmlFor="confrim"
-        id="confirm"
-        type="password"
-        value={passwordConfirmValue}
-        onChange={passwordConfirmChangeHandler}
-        onBlur={passwordConfirmBlurHandler}
-      />
-      {passwordConfirmHasError && (
-        <p className={classes.Paragraph}>Please enter the valid password!</p>
-      )}
-      {isPasswordConfirmed && (
-        <p className={classes.Paragraph}>Passwords are not the same!</p>
-      )}
-      <Button
-        className={!isValidForm ? classes.InvalidBtn : ""}
-        disabled={!isValidForm}
-        type="submit"
-      >
-        Register
-      </Button>
-    </Form>
+    <div className={classes.Container}>
+      <Form onSubmit={onSubmitHandler}>
+        <InputField
+          className={classes.InputContainer}
+          label="E-Mail"
+          htmlFor="email"
+          id="email"
+          type="email"
+          value={emailValue}
+          onChange={emailChangeHandler}
+          onBlur={emailBlurHandler}
+        />
+        {emailHasError && (
+          <p className={classes.Paragraph}>Please enter the valid email!</p>
+        )}
+        <InputField
+          className={classes.InputContainer}
+          label="Password"
+          htmlFor="password"
+          id="password"
+          type="password"
+          value={passwordValue}
+          onChange={passwordChangeHandler}
+          onBlur={passwordBlurHandler}
+        />
+        {passwordHasError && (
+          <p className={classes.Paragraph}>Please enter the valid password!</p>
+        )}
+        <InputField
+          className={classes.InputContainer}
+          label="Confirm Password"
+          htmlFor="confrim"
+          id="confirm"
+          type="password"
+          value={passwordConfirmValue}
+          onChange={passwordConfirmChangeHandler}
+          onBlur={passwordConfirmBlurHandler}
+        />
+        {passwordConfirmHasError && (
+          <p className={classes.Paragraph}>Please enter the valid password!</p>
+        )}
+        {isPasswordConfirmed && (
+          <p className={classes.Paragraph}>Passwords are not the same!</p>
+        )}
+        <Button
+          className={!isValidForm ? classes.InvalidBtn : classes.Btn}
+          disabled={!isValidForm}
+          type="submit"
+        >
+          Register
+        </Button>
+      </Form>
+      <Link to="/login" className={classes.Link}>
+        <Button>Back</Button>
+      </Link>
+    </div>
   );
 };
 

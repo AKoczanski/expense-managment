@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className={classes.BtnContainer}>
+    <div className={classes.Container}>
       <Form onSubmit={onSubmitHandler}>
         <InputField
           className={classes.InputContainer}

@@ -30,6 +30,7 @@
     color: #292929;
     border-color: #ccc;
     cursor: not-allowed;
+    width: 100%;
 }
 
 .InvalidInput input {
@@ -46,4 +47,13 @@
     font-size: 22px;
     color: red;
     margin-top: -20px;
+}
+
+.Btn {
+    width: 100%;
+}
+
+.Link button {
+    width: 100%;
+    margin-top: 20px;
 }
