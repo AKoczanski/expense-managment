@@ -4,6 +4,7 @@ import InputField from "../InputField";
 import Button from "../../UI/Button";
 import useInput from "../../../hooks/use-input";
 import classes from "./Login.module.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -74,7 +75,9 @@ const Login = () => {
           </Button>
         </div>
       </Form>
-      <Button>Register</Button>
+      <Link to="/registration" className={classes.Link}>
+        <Button>Register</Button>
+      </Link>
     </div>
   );
 };

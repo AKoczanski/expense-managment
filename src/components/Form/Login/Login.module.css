@@ -54,6 +54,7 @@
     flex-direction: column;
 }
 
-.BtnContainer button:nth-child(2) {
+.Link button {
+    width: 100%;
     margin-top: 20px;
 }
