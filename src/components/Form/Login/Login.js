@@ -36,41 +36,46 @@ const Login = () => {
   };
 
   return (
-    <Form onSubmit={onSubmitHandler}>
-      <InputField
-        className={classes.InputContainer}
-        label="E-Mail"
-        htmlFor="email"
-        id="email"
-        type="email"
-        value={emailValue}
-        onChange={emailChangeHandler}
-        onBlur={emailBlurHandler}
-      />
-      {emailHasError && (
-        <p className={classes.Paragraph}>Please enter the valid email!</p>
-      )}
-      <InputField
-        className={classes.InputContainer}
-        label="Password"
-        htmlFor="password"
-        id="password"
-        type="password"
-        value={passwordValue}
-        onChange={passwordChangeHandler}
-        onBlur={passwordBlurHandler}
-      />
-      {passwordHasError && (
-        <p className={classes.Paragraph}>Please enter the valid password!</p>
-      )}
-      <Button
-        className={!isValidForm ? classes.InvalidBtn : ""}
-        disabled={!isValidForm}
-        type="submit"
-      >
-        Login
-      </Button>
-    </Form>
+    <div className={classes.BtnContainer}>
+      <Form onSubmit={onSubmitHandler}>
+        <InputField
+          className={classes.InputContainer}
+          label="E-Mail"
+          htmlFor="email"
+          id="email"
+          type="email"
+          value={emailValue}
+          onChange={emailChangeHandler}
+          onBlur={emailBlurHandler}
+        />
+        {emailHasError && (
+          <p className={classes.Paragraph}>Please enter the valid email!</p>
+        )}
+        <InputField
+          className={classes.InputContainer}
+          label="Password"
+          htmlFor="password"
+          id="password"
+          type="password"
+          value={passwordValue}
+          onChange={passwordChangeHandler}
+          onBlur={passwordBlurHandler}
+        />
+        {passwordHasError && (
+          <p className={classes.Paragraph}>Please enter the valid password!</p>
+        )}
+        <div className={classes.BtnContainer}>
+          <Button
+            className={!isValidForm ? classes.InvalidBtn : ""}
+            disabled={!isValidForm}
+            type="submit"
+          >
+            Login
+          </Button>
+        </div>
+      </Form>
+      <Button>Register</Button>
+    </div>
   );
 };
 

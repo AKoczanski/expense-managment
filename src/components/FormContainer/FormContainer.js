@@ -10,7 +10,7 @@ const FormContainer = () => {
       <div className={classes.FormContainer}>
         <div className={classes.FlexContainer}>
           <Login />
-          <Registration />
+          {/* <Registration /> */}
         </div>
       </div>
     </Waves>
