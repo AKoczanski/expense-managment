@@ -16,3 +16,13 @@
 .Control select:focus {
     outline: none;
 }
+
+@media (min-width: 300px) and (max-width: 1000px) {
+    .Control {
+        width: 100%;
+    }
+
+    .Control select {
+        margin: 0 auto;
+    }
+}

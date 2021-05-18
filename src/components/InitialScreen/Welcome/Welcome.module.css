@@ -1,5 +1,4 @@
 .Container {
-    /* background-color: rebeccapurple; */
     width: 35%;
     text-align: center;
 }
@@ -16,4 +15,20 @@
 .Paragraph {
     font-size: 25px;
     color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+    .Container {
+        width: 80%;
+        margin-top: 100px;
+    }
+
+    .Container button {
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .Header {
+        font-size: 40px;
+    }
 }

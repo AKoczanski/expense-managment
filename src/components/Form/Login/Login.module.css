@@ -58,3 +58,28 @@
     width: 100%;
     margin-top: 20px;
 }
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .InputContainer label {
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+    .InputContainer input {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .Container button {
+        width: 50%;
+        font-size: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+
+    .Paragraph {
+        font-size: 15px;
+        margin-top: 0;
+        margin-left: 40px;
+    }
+}

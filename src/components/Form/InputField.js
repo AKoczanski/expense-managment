@@ -2,7 +2,17 @@ import classes from "./InputField.module.css";
 import React from "react";
 
 const InputField = (props) => {
-  const { label, htmlFor, type, onChange, onBlur, value, id } = props;
+  const {
+    label,
+    htmlFor,
+    type,
+    onChange,
+    onBlur,
+    value,
+    id,
+    minLength,
+    maxLength,
+  } = props;
 
   return (
     <div className={props.className}>
@@ -13,6 +23,8 @@ const InputField = (props) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        minLength={minLength}
+        maxLength={maxLength}
         required
       />
     </div>

@@ -13,3 +13,9 @@
 .Header span {
     color: #88D8D8;
 }
+
+@media (min-width: 300px) and (max-width: 800px) {
+    .Container {
+        width: 90%;
+    }
+}

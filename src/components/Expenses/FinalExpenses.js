@@ -18,7 +18,7 @@ function FinalExpenses() {
         if (data === null) {
           return null;
         }
-        Object.keys(data).map((key, index) => {
+        Object.keys(data).map((key) => {
           if (authCtx.email === data[key].user) {
             expensesArray.push({
               id: Math.random(),
@@ -29,7 +29,7 @@ function FinalExpenses() {
           }
         });
       });
-  }, [expensesArray]);
+  }, []);
 
   const [userExpenses, setUserExpenses] = useState(expensesArray);
 

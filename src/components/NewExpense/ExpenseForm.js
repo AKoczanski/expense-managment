@@ -46,6 +46,7 @@ function ExpenseForm(props) {
   };
 
   const logoutHandler = () => {
+    window.location.reload();
     authCtx.logout();
   };
 

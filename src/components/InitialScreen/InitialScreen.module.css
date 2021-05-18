@@ -8,8 +8,15 @@
 .FlexContainer {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 15%;
 
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    .FlexContainer {
+        flex-direction: column;
+    }
 }

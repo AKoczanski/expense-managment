@@ -108,6 +108,8 @@ const Registration = () => {
           htmlFor="password"
           id="password"
           type="password"
+          minLength="6"
+          maxLength="15"
           value={passwordValue}
           onChange={passwordChangeHandler}
           onBlur={passwordBlurHandler}
@@ -121,6 +123,8 @@ const Registration = () => {
           htmlFor="confrim"
           id="confirm"
           type="password"
+          minLength="6"
+          maxLength="15"
           value={passwordConfirmValue}
           onChange={passwordConfirmChangeHandler}
           onBlur={passwordConfirmBlurHandler}
