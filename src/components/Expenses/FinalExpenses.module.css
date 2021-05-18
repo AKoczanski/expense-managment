@@ -1,7 +1,7 @@
 .Container {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     z-index: 400;
 }
 
@@ -16,6 +16,7 @@
 @media (min-width: 300px) and (max-width: 800px) {
     .FlexContainer {
         flex-direction: column;
+        height: 100vh;
     }
 
     .Waves {
