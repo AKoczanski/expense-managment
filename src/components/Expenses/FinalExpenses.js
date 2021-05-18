@@ -1,38 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Waves from "../UI/Waves";
 import Expenses from "./Expenses";
 import classes from "./FinalExpenses.module.css";
 import NewExpense from "../NewExpense/NewExpense";
+import AuthContext from "../../store/auth-context";
 
-const TEMP = [
-  {
-    id: "e1",
-    title: "Toilet Paper",
-    amount: 94.39,
-    date: new Date(2020, 2, 18),
-  },
-  {
-    id: "e2",
-    title: "Car Insurance",
-    amount: 294.39,
-    date: new Date(2021, 2, 28),
-  },
-  {
-    id: "e3",
-    title: "Laptop",
-    amount: 4294.39,
-    date: new Date(2021, 1, 22),
-  },
-  {
-    id: "e4",
-    title: "Car Insurance",
-    amount: 294.39,
-    date: new Date(2021, 2, 28),
-  },
-];
+let expensesArray = [];
 
 function FinalExpenses() {
-  const [userExpenses, setUserExpenses] = useState(TEMP);
+  const authCtx = useContext(AuthContext);
+  useEffect(() => {
+    fetch(
+      "https://expense-managment-c1b24-default-rtdb.firebaseio.com/expenses.json"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data === null) {
+          return null;
+        }
+        Object.keys(data).map((key, index) => {
+          if (authCtx.email === data[key].user) {
+            expensesArray.push({
+              id: Math.random(),
+              title: data[key].expense.title,
+              amount: data[key].expense.amount,
+              date: new Date(data[key].expense.date),
+            });
+          }
+        });
+      });
+  }, [expensesArray]);
+
+  const [userExpenses, setUserExpenses] = useState(expensesArray);
 
   const addExpenseHandler = (expense) => {
     setUserExpenses((prev) => {

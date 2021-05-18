@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Form from "../Form";
 import InputField from "../InputField";
 import Button from "../../UI/Button";
 import useInput from "../../../hooks/use-input";
 import classes from "./Registration.module.css";
 import { Link } from "react-router-dom";
+import AuthContext from "../../../store/auth-context";
+import { useHistory } from "react-router-dom";
 
 const Registration = () => {
+  const history = useHistory();
+  const authCtx = useContext(AuthContext);
   const {
     value: emailValue,
     isValid: emailIsValid,
@@ -46,6 +50,37 @@ const Registration = () => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+    fetch(
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBYZ_osZw4EDlvhIlO5pzUVCObTX_FK--I",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          email: emailValue,
+          password: passwordValue,
+          returnSecureToken: true,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((data) => {
+            console.log(data);
+          });
+        }
+      })
+      .then((data) => {
+        authCtx.login(data.idToken);
+        history.replace("/login");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+
     emailReset();
     passwordReset();
     passwordConfirmReset();

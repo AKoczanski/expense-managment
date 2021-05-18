@@ -1,11 +1,13 @@
 import classes from "./ExpenseForm.module.css";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "../UI/Button";
+import AuthContext from "../../store/auth-context";
 
 function ExpenseForm(props) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
+  const authCtx = useContext(AuthContext);
 
   const changeTitle = (event) => {
     setTitle(event.target.value);
@@ -26,10 +28,25 @@ function ExpenseForm(props) {
       amount: +amount,
       date: new Date(date),
     };
+
+    fetch(
+      "https://expense-managment-c1b24-default-rtdb.firebaseio.com/expenses.json",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          user: authCtx.email,
+          expense: expenses,
+        }),
+      }
+    );
     props.onSaveExpenseData(expenses);
     setTitle("");
     setAmount("");
     setDate("");
+  };
+
+  const logoutHandler = () => {
+    authCtx.logout();
   };
 
   return (
@@ -74,6 +91,9 @@ function ExpenseForm(props) {
           Add
         </Button>
       </form>
+      <Button className={classes.AddBtn} onClick={logoutHandler}>
+        Log out
+      </Button>
     </div>
   );
 }
