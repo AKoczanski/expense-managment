@@ -3,7 +3,7 @@ import React from "react";
 
 function Waves(props) {
   return (
-    <section className={classes.Section}>
+    <section className={`${classes.Section} ${props.className}`}>
       {props.children}
       <div className={classes.Shape}>
         <svg

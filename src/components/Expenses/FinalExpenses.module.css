@@ -17,4 +17,8 @@
     .FlexContainer {
         flex-direction: column;
     }
+
+    .Waves {
+        display: none;
+    }
 }

@@ -16,11 +16,13 @@
 @media (min-width: 300px) and (max-width: 650px) {
     .FormContainer {
         margin-top: 200px;
+        height: auto;
     }
 }
 
 @media (min-width: 651px) and (max-width: 1600px) {
     .FormContainer {
         margin-top: 100px;
+        height: auto;
     }
 }

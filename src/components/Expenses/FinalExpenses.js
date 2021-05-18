@@ -40,14 +40,15 @@ function FinalExpenses() {
   };
 
   return (
-    <Waves>
+    <div>
+      <Waves className={classes.Waves} />
       <div className={classes.Container}>
         <div className={classes.FlexContainer}>
           <NewExpense onAddExpense={addExpenseHandler} />
           <Expenses expenses={userExpenses} />
         </div>
       </div>
-    </Waves>
+    </div>
   );
 }
 

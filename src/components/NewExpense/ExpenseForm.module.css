@@ -43,18 +43,12 @@
 
 @media (min-width: 300px) and (max-width: 800px) {
     .FlexContainer {
-        width: 50%;
-        margin-top: 200px;
+        width: 100%;
+        margin-top: 20px;
     }
 
     .Container button {
-        width: 80%;
+        width: 100%;
         font-size: 16px;
     }
-
-    .Container {
-        margin-bottom: -100px;
-    }
-
-
 }
