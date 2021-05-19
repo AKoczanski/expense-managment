@@ -28,6 +28,9 @@ npm install
 
 npm start
 
+login: test@wp.pl
+password: test123
+
 ```
 
 ## Live 🎆
