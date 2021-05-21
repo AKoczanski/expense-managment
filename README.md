@@ -14,7 +14,7 @@ This is simple React application to expense managment and income. In this projec
 | --------------------------------------------------------------------- | ---------------------------------------- |
 | [JSX](https://pl.reactjs.org/docs/introducing-jsx.html)               | XML/HTML-like syntax used by React       |
 | [JavaScript](https://www.javascript.com)                              | Most powerful language to build websites |
-| [REACT](https://reactjs.org/)                                         | Most popular library                     |
+| [REACT](https://reactjs.org/)                                         | Most popular JavaScript library          |
 | [Firebase](https://firebase.google.com/docs/reference/rest/database)  | DataBase with fantasic authentication    |
 
 
