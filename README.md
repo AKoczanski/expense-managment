@@ -12,10 +12,10 @@ This is simple React application to expense managment and income. In this projec
 
 | Tech                                                                  | Description                              |
 | --------------------------------------------------------------------- | ---------------------------------------- |
-| [JSX](https://pl.reactjs.org/docs/introducing-jsx.html)               | CSS with superpowers                     |
+| [JSX](https://pl.reactjs.org/docs/introducing-jsx.html)               | XML/HTML-like syntax used by React       |
 | [JavaScript](https://www.javascript.com)                              | Most powerful language to build websites |
-| [REACT](https://reactjs.org/)                                         | Animate on scroll library                |
-| [Firebase](https://firebase.google.com/docs/reference/rest/database)  | Useful library to create sliders         |
+| [REACT](https://reactjs.org/)                                         | Most popular library                     |
+| [Firebase](https://firebase.google.com/docs/reference/rest/database)  | DataBase with fantasic authentication    |
 
 
 ## Installation 💿
